@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package linkedlist;
 
 /**
@@ -12,11 +11,39 @@ package linkedlist;
  */
 public class LinkedList {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private int value;
+    private LinkedList next;
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public LinkedList getNext() {
+        return next;
+    }
+
+    public void setNext(LinkedList next) {
+        this.next = next;
+    }
+
+    public LinkedList(int value, LinkedList next) {
+        this.next = next;
+        this.value = value;
     }
     
+    @Override
+    public String toString(){
+        String result="("+getValue()+") ";
+        LinkedList next = getNext();
+        while (next != null) {
+            result+="("+next.getValue()+") ";
+            next = next.getNext();
+        }
+        return result;
+    }
+
 }
