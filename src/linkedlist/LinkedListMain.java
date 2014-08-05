@@ -23,5 +23,16 @@ public class LinkedListMain {
         LinkedListUtills.add(ll0, 10);
         LinkedListUtills.add(ll0, 11);
         System.out.println(ll0);
+        LinkedListUtills.remove(ll0);
+        System.out.println(ll0);
+        LinkedListUtills.add(ll0, 17);
+        LinkedListUtills.add(ll0, 6);
+        System.out.println(ll0);
+        LinkedListUtills.remove(ll0);
+        LinkedListUtills.remove(ll0);
+        LinkedListUtills.remove(ll0);
+        LinkedListUtills.remove(ll0);
+        LinkedListUtills.remove(ll0);
+        System.out.println(ll0);
     }
 }

@@ -13,11 +13,11 @@ import linkedlist.LinkedList;
  */
 public class LinkedListUtills {
 
-    public static void add(LinkedList newItem, int value) {
-        LinkedList oldHead = getHead(newItem);
+    public static void add(LinkedList input, int value) {
+        LinkedList oldHead = getHead(input);
         LinkedList newHead = new LinkedList(value, null);
         oldHead.setNext(newHead);
-        
+
     }
 
     public static LinkedList getHead(LinkedList tail) {
@@ -28,5 +28,12 @@ public class LinkedListUtills {
             head = tail;
         }
         return head;
+    }
+
+    public static void remove(LinkedList input) {
+        while (input.getNext().getNext() != null) {
+            input = input.getNext();
+        }
+        input.setNext(null);
     }
 }
